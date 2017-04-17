@@ -1,7 +1,59 @@
-# Rules4Redit JUnit Rules
+# Redis JUnit Rules
 
-JUnit rules for controlling an embedded Redis instance for testing.
+A simple wrapper for [embedded-redis] to start and stop [Redis] server instances in your integration tests using [JUnit]'s test rules.
+
+# Integration
+
+## Maven
+
+tbd ..
+
+```xml
+<dependency>
+  <groupId>com.hascode.r4r</groupId>
+  <artifactId>rules4redis</artifactId>
+  <version>1.0.0</version>
+  <scope>test</scope>
+</dependency>
+```
+
+## Gradle
+
+tbd ..
+
+```groovy
+dependencies {
+  testCompile 'com.hascode.r4r:rules4redis:1.0.0'
+}
+```
+
+## Example
+
+```java
+public class RuleTest {
+    @ClassRule
+    public static RedisServerRule rule = new RedisServerRule(new RedisServerBuilder().port(6379));
+
+    @Test
+    public void shouldWriteAndReadFromRedisInstance() {
+        Jedis jedis = new Jedis("localhost", 6379);
+        Assert.assertEquals(jedis.get("somekey"), null);
+        jedis.set("somekey", "1234");
+        Assert.assertEquals(jedis.get("somekey"), "1234");
+    }
+}
+```
+
+## License
+
+Licensed under the [Apache License, Version 2.0]
 
 ----
 
 **2017 Micha Kops / hasCode.com**
+
+   [embedded-redis]:https://github.com/kstyrc/embedded-redis
+   [Redis]:https://redis.io/
+   [JUnit]:http://junit.org/junit4/
+   [Apache License, Version 2.0]:https://www.apache.org/licenses/LICENSE-2.0.html
+
