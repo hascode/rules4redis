@@ -40,4 +40,11 @@
             <version>2.9.0</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-repo-maven-example</id>
+            <url>https://api.bintray.com/maven/hascode/maven/rules4redis/;publish=1</url>
+        </repository>
+    </distributionManagement>
 </project>
