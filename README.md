@@ -17,7 +17,7 @@ Add the Bintray repository and one dependency ..
 <dependency>
   <groupId>com.hascode.r4r</groupId>
   <artifactId>rules4redis</artifactId>
-  <version>1.0.0</version>
+  <version>0.2.0</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -33,7 +33,7 @@ repositories {
 }
  
 dependencies {
-  testCompile 'com.hascode.r4r:rules4redis:1.0.0'
+  testCompile 'com.hascode.r4r:rules4redis:0.2.0'
 }
 ```
 
