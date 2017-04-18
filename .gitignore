@@ -5,3 +5,4 @@ gradlew
 gradlew.bat
 .idea
 settings.gradle
+rules4redis.iml

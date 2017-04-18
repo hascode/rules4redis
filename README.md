@@ -6,9 +6,14 @@ A simple wrapper for [embedded-redis] to start and stop [Redis] server instances
 
 ## Maven
 
-tbd ..
+Add the Bintray repository and one dependency ..
 
 ```xml
+<repository>
+    <id>hascode-bintray</id>
+    <url>https://dl.bintray.com/hascode/maven</url>
+</repository>
+
 <dependency>
   <groupId>com.hascode.r4r</groupId>
   <artifactId>rules4redis</artifactId>
@@ -22,6 +27,12 @@ tbd ..
 tbd ..
 
 ```groovy
+repositories {
+    maven {
+        url 'https://dl.bintray.com/hascode/maven'
+    }
+}
+ 
 dependencies {
   testCompile 'com.hascode.r4r:rules4redis:1.0.0'
 }

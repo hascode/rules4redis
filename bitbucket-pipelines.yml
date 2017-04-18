@@ -1,9 +1,8 @@
-# using gradle as build tool ..
-image: qlik/gradle
+image: maven:3.3.3
 
 pipelines:
   default:
     - step:
         script:
-          - gradle --version
-          - gradle test
+          - mvn --version
+          - mvn clean test
