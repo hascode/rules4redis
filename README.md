@@ -24,7 +24,6 @@ Add the Bintray repository and one dependency ..
 
 ## Gradle
 
-tbd ..
 
 ```groovy
 repositories {
