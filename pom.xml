@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.hascode.r4r</groupId>
     <artifactId>rules4redis</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
 
     <developers>
         <developer>
